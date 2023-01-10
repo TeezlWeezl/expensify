@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import moment from "moment";
 
 
 const filtersSlice = createSlice({
@@ -7,8 +8,8 @@ const filtersSlice = createSlice({
     filters: {
       text: '',
       sortBy: '',
-      startDate: undefined,
-      endDate: undefined
+      startDate: moment().startOf('month'),
+      endDate: moment().endOf('month')
     }
   },
   reducers: {

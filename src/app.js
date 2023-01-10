@@ -7,6 +7,7 @@ import { addExpense, editExpense, removeExpense } from './state/expensesSlice'
 import { setEndDate, setStartDate, setText, sortByAmount, sortByDate } from './state/filtersSlice'
 import './styles/styles.scss'
 import selectVisibleExpenses from './selectors/expenses'
+import moment from 'moment'
 
 // const endSubscribe = appStore.subscribe(() => {
 //   console.log(selectVisibleExpenses(
@@ -17,11 +18,11 @@ import selectVisibleExpenses from './selectors/expenses'
 
 
 // EXPENSE DISPATCH 
-appStore.dispatch(addExpense({ description: 'Item 1', amount: 5000, createdAt: 100 }))
-// appStore.dispatch(addExpense({ description: 'Item 2', amount: 4000, createdAt: 200 }))
-// appStore.dispatch(addExpense({ description: 'Item 3', amount: 3000, createdAt: 300 }))
-// appStore.dispatch(addExpense({ description: 'Item 4', amount: 2000, createdAt: 400 }))
-// appStore.dispatch(addExpense({ description: 'Item 5', amount: 1000, createdAt: 500 }))
+appStore.dispatch(addExpense({ description: 'Item 1', amount: 5000, createdAt: 1673373223812 }))
+appStore.dispatch(addExpense({ description: 'Item 2', amount: 4000, createdAt: 1673373223813 }))
+appStore.dispatch(addExpense({ description: 'Item 3', amount: 3000, createdAt: 1673373223814 }))
+appStore.dispatch(addExpense({ description: 'Item 4', amount: 2000, createdAt: 1673373223815 }))
+appStore.dispatch(addExpense({ description: 'Item 5', amount: 1000, createdAt: 1673373223816 }))
 // let id0 = appStore.getState().expenses.expenses[0].id
 
 // appStore.dispatch(removeExpense(id0))

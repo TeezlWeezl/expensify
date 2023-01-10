@@ -6,7 +6,10 @@ const appStore = configureStore({
   reducer: {
     expenses: expensesReducer,
     filters: filtersReducer
-  } 
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false
+  })
 })
 
 export default appStore
