@@ -15,7 +15,7 @@ console.log(new Date().toLocaleDateString('de-de', {
 const ExpenseForm = (props) => {
   let [state, changeState] = useState({
     description: props.expense ? props.expense.description : '',
-    amount: props.expense ? props.expense.amount : '',
+    amount: props.expense ? props.expense.amount.toString() : '',
     note: props.expense ? props.expense.note : '',
     createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
     calendarFocused: true,
@@ -88,7 +88,7 @@ const ExpenseForm = (props) => {
         </textarea>
         <button
           type='submit'
-        >Add Expense</button>
+        >Save Expense</button>
       </form>
       {state.error && <p>{state.error}</p>}
     </div>
