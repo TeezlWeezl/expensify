@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
 import ExpenseForm from "./ExpenseForm"
 import { useDispatch } from "react-redux"
-import { editExpense } from "../state/expensesSlice"
+import { editExpense, removeExpense } from "../state/expensesSlice"
 
 const EditExpensePage = () => {
   const navigate = useNavigate()
@@ -24,7 +24,10 @@ const EditExpensePage = () => {
           // console.log(expense);
         }}
       />
-      <button onClick={() => navigate(-1)}>Back</button>
+      <button onClick={() => {
+        dispatch(removeExpense(expense.id))
+        navigate('/')
+      }}>Remove</button>
     </div>
   )
 }
